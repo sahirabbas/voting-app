@@ -54,5 +54,3 @@ spec:
       - name: db-data
         persistentVolumeClaim:
           claimName: db
-      securityContext:
-        allowPrivilegeEscalation: false
