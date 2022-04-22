@@ -1,4 +1,4 @@
-namespace: "training"
+namespace: "voting"
 resources:
   - ./result/deployment.yaml
   - ./result/ingress.yaml
