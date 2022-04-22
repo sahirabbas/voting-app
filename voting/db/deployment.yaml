@@ -6,6 +6,10 @@ metadata:
   name: db
   namespace: voting
 spec:
+  securityContext:
+    runAsUser: 1000
+    runAsGroup: 3000
+    fsGroup: 2000
   replicas: 1
   selector:
     matchLabels:
@@ -50,3 +54,5 @@ spec:
       - name: db-data
         persistentVolumeClaim:
           claimName: db
+      securityContext:
+      allowPrivilegeEscalation: false
