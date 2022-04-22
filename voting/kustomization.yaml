@@ -1,0 +1,16 @@
+namespace: "training"
+resources:
+  - ./result/deployment.yaml
+  - ./result/ingress.yaml
+  - ./result/service.yaml
+  - ./worker/deployment.yaml
+  - ./configs/options.yaml
+  - ./configs/db-secret.yaml
+  - ./redis/deployment.yaml
+  - ./redis/service.yaml
+  - ./db/deployment.yaml
+  - ./db/service.yaml
+  - ./db/persistentvolumeclaim.yaml
+  - ./vote/deployment.yaml
+  - ./vote/ingress.yaml
+  - ./vote/service.yaml

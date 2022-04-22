@@ -1,0 +1,21 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+    app: result
+  name: result
+  namespace: voting
+spec:
+  rules:
+          #  - host: result.user0-w1.k8s.atix-training.de
+  - host: result.sahir.k8s-trial-working-day.atix-training.de
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: result
+            port:
+              number: 8080

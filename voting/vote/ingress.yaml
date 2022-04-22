@@ -1,0 +1,21 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+    app: vote
+  name: vote
+  namespace: voting
+spec:
+  rules:
+          #  - host: vote.apps.openshift.atix-training.de
+  - host: vote.apps.sahir.k8s-trial-working-day.atix-training.de
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: vote
+            port:
+              number: 8080
