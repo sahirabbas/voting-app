@@ -23,13 +23,6 @@ spec:
     spec:
       containers:
       - image: andywirtzk8s/voting-worker:v1.0
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         name: worker
         envFrom:
         - prefix: POSTGRES_
